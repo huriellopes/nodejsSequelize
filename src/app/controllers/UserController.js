@@ -2,9 +2,13 @@ const User = require('./models/User')
 
 module.exports = {
   async index (_, res) {
-    const users = await User.findAll()
+    try {
+      const users = await User.findAll()
 
-    return res.status(200).json({ 'status': 200, 'data': users })
+      return res.status(200).json({ 'status': 200, 'data': users })
+    } catch (err) {
+      res.status(400).send('Error')
+    }
   },
   async store (req, res) {
     const { name, email } = req.body

@@ -1,11 +1,13 @@
-require('dotenv').config()
+const dotenv = require('dotenv')
+
+dotenv.config({path: './.env'})
 
 module.exports = {
-  dialect: process.env.APP_DIALECT,
-  host: process.env.APP_HOST,
-  username: process.env.APP_USERNAME,
-  password: process.env.APP_PASSWORD,
-  database: process.env.APP_DATABASE,
+  dialect: process.env.DB_DIALECT,
+  host: process.env.DB_HOST,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
   define: {
     timestamps: true,
     underscored: true
