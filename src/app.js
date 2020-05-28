@@ -9,15 +9,13 @@ const app = express()
 app.disable('x-powered-by')
 
 consign({
-  cwd: './app',
+  cwd: 'src/app',
   verbose: process.env.APP_DEBUG === 'true' || false,
   locale: 'pt-br'
 })
   .include('./middlewares/globals')
-  .then('./controllers')
-  .then('./models')
-  .then('./database')
-  .then('./routes')
+  .then('../database')
+  .then('../routes')
   .into(app)
 
 module.exports = app
