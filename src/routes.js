@@ -1,11 +1,7 @@
-const express = require('express')
-const routes = express.Router()
+/** @param { import ('express') .Express } app */
+module.exports = app => {
+  app.get('/test', (_, res) => res.json('Api is running!'))
 
-const UserController = require('./app/controllers/UserController')
-
-routes.get('/test', (_, res) => res.json('Api is running!'))
-
-routes.get('/users', UserController.index)
-routes.post('/users', UserController.store)
-
-module.exports = routes
+  app.get('/users', app.controllers.UserController.index)
+  app.post('/users', app.controllers.UserController.store)
+}
