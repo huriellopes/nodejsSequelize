@@ -12,8 +12,10 @@ consign({
   cwd: 'src/app',
   verbose: process.env.APP_DEBUG === 'true' || false,
   locale: 'pt-br',
+  extensions: ['.js'],
 })
   .include('./middlewares/globals')
+  // .then('./controllers')
   .then('../database')
   .then('../routes')
   .into(app)
