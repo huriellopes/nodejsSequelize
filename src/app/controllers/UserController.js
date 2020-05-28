@@ -7,7 +7,7 @@ module.exports = {
 
       return res.status(200).json({ status: 200, data: users })
     } catch (err) {
-      res.status(400).send('Error')
+      res.status(400).send('Error: ' + err)
     }
   },
   async store(req, res) {

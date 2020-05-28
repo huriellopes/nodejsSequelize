@@ -1,6 +1,6 @@
 const dotenv = require('dotenv')
 
-dotenv.config({path: './.env'})
+dotenv.config({ path: './.env' })
 
 module.exports = {
   dialect: process.env.DB_DIALECT,
@@ -10,6 +10,6 @@ module.exports = {
   database: process.env.DB_NAME,
   define: {
     timestamps: true,
-    underscored: true
-  }
+    underscored: true,
+  },
 }

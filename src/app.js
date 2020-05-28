@@ -11,7 +11,7 @@ app.disable('x-powered-by')
 consign({
   cwd: 'src/app',
   verbose: process.env.APP_DEBUG === 'true' || false,
-  locale: 'pt-br'
+  locale: 'pt-br',
 })
   .include('./middlewares/globals')
   .then('../database')
