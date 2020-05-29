@@ -1,7 +1,4 @@
-const dotenv = require('dotenv')
 const app = require('./app')
-
-dotenv.config({ path: './.env' })
 
 app.listen(process.env.APP_PORT || 3000, () => {
   console.log(`=> Servidor rodando na porta: ${process.env.APP_PORT || 3000}!`)
