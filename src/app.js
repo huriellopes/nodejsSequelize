@@ -7,7 +7,7 @@ const app = express()
 app.disable('x-powered-by')
 
 consign({
-  cwd: './src/app',
+  cwd: 'src/app',
   verbose: process.env.APP_DEBUG === 'true' || false,
   locale: 'pt-br',
   extensions: ['.js'],
