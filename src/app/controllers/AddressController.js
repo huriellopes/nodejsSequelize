@@ -9,7 +9,10 @@ module.exports = {
       include: { association: 'address' },
     })
 
-    if (!user) res.status(400).json({ error: 'User not found!' })
+    if (!user) res.status(404).json({ error: 'User not found!' })
+
+    if (!user.address !== null)
+      res.status(404).json({ error: 'Address not found!' })
 
     return res.status(200).json({ status: 200, data: user.address })
   },
@@ -19,7 +22,7 @@ module.exports = {
 
     const user = await User.findByPk(user_id)
 
-    if (!user) res.status(400).json({ error: 'User not found!' })
+    if (!user) res.status(404).json({ error: 'User not found!' })
 
     await Address.create({ zipcode, street, number, user_id })
 

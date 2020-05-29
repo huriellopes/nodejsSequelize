@@ -7,7 +7,11 @@
     "dev": "nodemon --exec sucrase-node ./src/server.js",
     "eslint-fix": "yarn eslint --fix --ext .js src/"
   },
-  "keywords": ["nodejs", "sequelize", "express"],
+  "keywords": [
+    "nodejs",
+    "sequelize",
+    "express"
+  ],
   "author": {
     "name": "Huriel Lopes",
     "email": "huriellopes1996@gmail.com"
@@ -29,8 +33,7 @@
     "express": "^4.17.1",
     "pg": "^8.2.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.21.11",
-    "sqlite3": "^4.2.0"
+    "sequelize": "^5.21.11"
   },
   "devDependencies": {
     "eslint": "^7.1.0",

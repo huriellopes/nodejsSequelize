@@ -1,6 +1,6 @@
 const User = require('../models/User')
 
-module.exports = {
+const UserController = {
   async index(_, res) {
     try {
       const users = await User.findAll()
@@ -22,3 +22,5 @@ module.exports = {
     }
   },
 }
+
+module.exports = UserController
