@@ -11,9 +11,6 @@ module.exports = {
 
     if (!user) res.status(404).json({ error: 'User not found!' })
 
-    if (!user.address !== null)
-      res.status(404).json({ error: 'Address not found!' })
-
     return res.status(200).json({ status: 200, data: user.address })
   },
   async store(req, res) {
